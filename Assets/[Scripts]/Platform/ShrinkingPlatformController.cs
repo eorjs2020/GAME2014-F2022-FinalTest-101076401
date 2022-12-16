@@ -17,6 +17,7 @@ public class ShrinkingPlatformController : MonoBehaviour
     private bool expand;
     public float waitingTime;
     private bool isShrinking = false;
+    private bool isDisapear = false;
     private void Start()
     {
         scale = platform.localScale;
@@ -28,17 +29,7 @@ public class ShrinkingPlatformController : MonoBehaviour
 
     void Update()
     {
-
-        if (scale.x <= 0)
-        {
-            platformTimer += Time.deltaTime;
-            if (platformTimer > waitingTime)
-            {
-                isActive = false;
-                platformTimer = 0;
-            }
-            
-        }
+              
         if(isActive)
         {
             Shrinking();           
@@ -86,6 +77,9 @@ public class ShrinkingPlatformController : MonoBehaviour
             isShrinking = true;
         }
     }
+
+  
+
     void Expand()
     {
         platform.gameObject.SetActive(true);
@@ -97,6 +91,7 @@ public class ShrinkingPlatformController : MonoBehaviour
             SoundManager.Instance.PlaySoundFX(Sound.EXPAND, Channel.PLATFORM_FX);
         }
     }
+
     void Floating()
     {
         transform.position = new Vector3(transform.position.x, orignalPos.y + Mathf.PingPong(Time.time * 0.2f, 0.2f), 0.0f);
