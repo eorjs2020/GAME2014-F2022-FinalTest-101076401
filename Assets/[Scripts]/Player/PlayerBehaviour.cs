@@ -1,3 +1,10 @@
+//PlayerBehaviour
+//LastUpdate 22_12_15
+//Daekoen_Lee 101076401
+//Revision History
+//First modified 22_12_15
+//Description - PlayerBehaviour - Control the player moving, jump and collision;
+
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;

@@ -1,8 +1,9 @@
-//  Daekeone Lee 101076401
-//  ShrinkingPlatformController.cs
-//  Last Update 2021-12-18
-//  Player is collliding with this platform will be shrinink and colliding end it we be expand until orinial scale
-
+//ShrinkingPlatformController
+//LastUpdate 22_12_15
+//Daekoen_Lee 101076401
+//Revision History
+//First modified 22_12_15
+//Description - ShrinkingPlatformController - Player is collliding with this platform will be shrinink and colliding end it we be expand until orinial scale
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
